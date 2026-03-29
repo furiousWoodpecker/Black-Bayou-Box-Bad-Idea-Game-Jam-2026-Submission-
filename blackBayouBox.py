@@ -3178,3 +3178,4 @@ while True:
                     escape_attempts += 1
             
     pygame.display.update()
+# Can you tell I was lazy when it came to optimising the code? #
