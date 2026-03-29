@@ -546,6 +546,7 @@ def inside_cell():
 
     def use_items(inventory, hint):
 
+        global shift_text
         global item_used
         global open_vent
         global escaping
