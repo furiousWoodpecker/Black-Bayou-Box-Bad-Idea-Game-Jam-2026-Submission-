@@ -438,7 +438,9 @@ pillow = [empty_space]
 hole = [empty_space]
 
 def inside_cell():
-    
+
+    global shift_text
+    global shift_rect
     main_options = True
     use_item_options = False
     look_under_mattress = False
@@ -545,8 +547,7 @@ def inside_cell():
     heading = ""
 
     def use_items(inventory, hint):
-
-        global shift_text
+        
         global item_used
         global open_vent
         global escaping
@@ -588,9 +589,6 @@ def inside_cell():
             shift_text = font1.render("Press SHIFT to go to sleep:", True, (255, 255, 255))
             cell = pygame.image.load(resource_path('prison_cell.png'))
         cell = pygame.transform.scale(cell, (1280, 480))
-
-        shift_rect = shift_text.get_rect()
-        shift_rect.bottomleft = (5, 720)
 
         if main_options == True:
             screen.fill('black')
@@ -1558,7 +1556,7 @@ def day4_Fishing():
                             net_casted = True
                             net_reeled = False
                         elif event.key == K_w and net_casted == True and fish_anim.is_animating == False:
-                            mixer.Channel(1).play(sfxreel)
+                            mixer.Channel(2).play(sfxreel)
                             fish_anim.animate()
                             net_reeled = True
                             net_casted = False
@@ -1588,7 +1586,7 @@ def day4_Fishing():
                 
     while fishing:
         fish_caught = 0
-        fish_to_catch = random.randint(4, 7) * 5
+        fish_to_catch = random.randint(3, 5) * 5
 
         fish_caught = fish(fish_caught, fish_to_catch)
         num_of_dishes = fish_caught // 5
@@ -3069,8 +3067,6 @@ while True:
                 if escaped == True:
                     ending()
                     break
-                else:
-                    escape_attempts += 1
 
 
             day_blank('Chopping')
@@ -3084,8 +3080,6 @@ while True:
                 if escaped == True:
                     ending()
                     break
-                else:
-                    escape_attempts += 1
 
 
             day_blank('Mining')
@@ -3099,8 +3093,6 @@ while True:
                 if escaped == True:
                     ending()
                     break
-                else:
-                    escape_attempts += 1
 
 
             day_blank('Warehouse')
@@ -3114,8 +3106,6 @@ while True:
                 if escaped == True:
                     ending()
                     break
-                else:
-                    escape_attempts += 1
 
 
             day_blank('Fishing')
@@ -3129,8 +3119,6 @@ while True:
                 if escaped == True:
                     ending()
                     break
-                else:
-                    escape_attempts += 1
 
 
             day_blank('Kitchen')
@@ -3144,8 +3132,6 @@ while True:
                 if escaped == True:
                     ending()
                     break
-                else:
-                    escape_attempts += 1
 
 
             day_blank('Laundry')
@@ -3159,8 +3145,6 @@ while True:
                 if escaped == True:
                     ending()
                     break
-                else:
-                    escape_attempts += 1
 
 
             day_blank('Free Time')
@@ -3175,8 +3159,6 @@ while True:
                 if escaped == True:
                     ending()
                     break
-                else:
-                    escape_attempts += 1
             
     pygame.display.update()
-# Can you tell I was lazy when it came to optimising the code? #
+# Can you tell I was lazy with my code optimisation?
