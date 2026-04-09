@@ -296,6 +296,7 @@ def inspect_cell(mattress, pillow, hole):
             cell_items[area_checked] = empty_space
             mattress[0] = cell_items[0]
             pillow[0] = cell_items[1]
+            hole[0] = cell_items[2]
 
         text1_rect = text1.get_rect()
         text1_rect.topleft = (5, 485)
@@ -736,6 +737,7 @@ def inside_cell():
                         elif inventory[0] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[0] = empty_space
                             else:
@@ -743,6 +745,7 @@ def inside_cell():
                         elif inventory[0] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[0] = empty_space
                             else:
@@ -760,6 +763,7 @@ def inside_cell():
                         elif inventory[1] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[1] = empty_space
                             else:
@@ -767,6 +771,7 @@ def inside_cell():
                         elif inventory[1] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[1] = empty_space
                             else:
@@ -785,6 +790,7 @@ def inside_cell():
                         elif inventory[2] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[2] = empty_space
                             else:
@@ -792,6 +798,7 @@ def inside_cell():
                         elif inventory[2] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[2] = empty_space
                             else:
@@ -810,6 +817,7 @@ def inside_cell():
                         elif inventory[3] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[3] = empty_space
                             else:
@@ -817,6 +825,7 @@ def inside_cell():
                         elif inventory[3] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[3] = empty_space
                             else:
@@ -835,6 +844,7 @@ def inside_cell():
                         elif inventory[4] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[4] = empty_space
                             else:
@@ -842,6 +852,7 @@ def inside_cell():
                         elif inventory[4] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[4] = empty_space
                             else:
@@ -1560,7 +1571,7 @@ def day4_Fishing():
                             fish_anim.animate()
                             net_reeled = True
                             net_casted = False
-                            num_of_fish_in_net = random.randint(0, 5)
+                            num_of_fish_in_net = random.randint(1, 5)
                             fish_caught += num_of_fish_in_net
                             fish_to_catch -= num_of_fish_in_net
                         elif (event.key == K_LSHIFT or event.key == K_RSHIFT) and fish_to_catch <= 0:
@@ -2649,6 +2660,7 @@ def escape_segment():
                         if inventory[0] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[0] = empty_space
                             else:
@@ -2656,6 +2668,7 @@ def escape_segment():
                         elif inventory[0] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[0] = empty_space
                             else:
@@ -2686,6 +2699,7 @@ def escape_segment():
                         if inventory[1] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[1] = empty_space
                             else:
@@ -2693,6 +2707,7 @@ def escape_segment():
                         elif inventory[1] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[1] = empty_space
                             else:
@@ -2723,6 +2738,7 @@ def escape_segment():
                         if inventory[2] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[2] = empty_space
                             else:
@@ -2730,6 +2746,7 @@ def escape_segment():
                         elif inventory[2] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[2] = empty_space
                             else:
@@ -2760,6 +2777,7 @@ def escape_segment():
                         if inventory[3] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[3] = empty_space
                             else:
@@ -2767,6 +2785,7 @@ def escape_segment():
                         elif inventory[3] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[3] = empty_space
                             else:
@@ -2797,6 +2816,7 @@ def escape_segment():
                         if inventory[4] == officers_coat:
                             if officers_coat not in accessories:
                                 accessories.append(officers_coat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 1.wav')))
                                 heading = "You put on the officer's coat."
                                 inventory[4] = empty_space
                             else:
@@ -2804,6 +2824,7 @@ def escape_segment():
                         elif inventory[4] == officers_hat:
                             if officers_hat not in accessories:
                                 accessories.append(officers_hat)
+                                mixer.Channel(0).play(mixer.Sound(resource_path('SFX Laundry 3.wav')))
                                 heading = "You put on the officer's hat."
                                 inventory[4] = empty_space
                             else:
@@ -3161,4 +3182,3 @@ while True:
                     break
             
     pygame.display.update()
-# Can you tell I was lazy with my code optimisation?
